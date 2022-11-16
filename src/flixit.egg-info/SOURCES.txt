@@ -1,0 +1,9 @@
+README.rst
+setup.cfg
+setup.py
+src/flixit/__init__.py
+src/flixit.egg-info/PKG-INFO
+src/flixit.egg-info/SOURCES.txt
+src/flixit.egg-info/dependency_links.txt
+src/flixit.egg-info/top_level.txt
+src/flixit/codec/__init__.py
