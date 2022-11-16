@@ -14,6 +14,7 @@ src/flixit/ML3_churn.py
 src/flixit/ML4.py
 src/flixit/ML5_diabetes.py
 src/flixit/ML6_kmeans_sales.py
+src/flixit/NQueens.py
 src/flixit/Quic_EXP5.py
 src/flixit/Quic_EXP5R.py
 src/flixit/__init__.py
@@ -22,4 +23,3 @@ src/flixit.egg-info/PKG-INFO
 src/flixit.egg-info/SOURCES.txt
 src/flixit.egg-info/dependency_links.txt
 src/flixit.egg-info/top_level.txt
-src/flixit/codec/__init__.py

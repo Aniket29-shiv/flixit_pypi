@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='flixit',
-    version='0.1',
+    version='0.2',
     license='MIT',
     author="Aniket Chopade",
     author_email='email@example.com',

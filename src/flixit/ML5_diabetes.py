@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-%matplotlib inline
+# %%matplotlib inline
 import warnings
 warnings.filterwarnings('ignore')
 from sklearn.model_selection import train_test_split
