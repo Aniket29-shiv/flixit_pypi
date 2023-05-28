@@ -3,6 +3,7 @@ setup.cfg
 setup.py
 src/flixit/CUDA_Matrix_Multiplication.py
 src/flixit/CUDA_Vector_Addition.py
+src/flixit/HPC1_new_bfsdfs.py
 src/flixit/HPC_Assignment_1_bfs_dfs.py
 src/flixit/HPC_Assignment_2_merge_bubble.py
 src/flixit/UbuntuStepsnew.py
