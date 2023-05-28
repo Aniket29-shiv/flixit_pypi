@@ -5,28 +5,8 @@
 
 using namespace std;
 
-// Parallel Bubble Sort function
-void parallelBubbleSort(int *array, int n)
-{
-    int i, j;
 
-#pragma omp parallel for private(i, j) shared(array)
-    for (i = 0; i < n - 1; i++)
-    {
-        for (j = 0; j < n - i - 1; j++)
-        {
-            if (array[j] > array[j + 1])
-            {
-                // Swap elements
-                int temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
-            }
-        }
-    }
-}
 
-// Parallel Merge Sort function
 void merge(int *array, int l, int m, int r)
 {
     int i, j, k;
@@ -100,7 +80,6 @@ void parallelMergeSort(int *array, int l, int r)
         merge(array, l, m, r);
     }
 }
-
 int main()
 {
     int n;
@@ -108,7 +87,7 @@ int main()
     cin >> n;
 
     int *array = new int[n];
-    srand(time(0));
+//    srand(time(0));
     for (int i = 0; i < n; i++)
     {
         array[i] = rand() % 100;
@@ -121,23 +100,8 @@ int main()
     }
     cout << endl;
 
-    int choice;
-    cout << "Enter 1 for Parallel Bubble Sort or 2 for Parallel Merge Sort: ";
-    cin >> choice;
+	parallelMergeSort(array, 0, n - 1);
 
-    if (choice == 1)
-    {
-        parallelBubbleSort(array, n);
-    }
-    else if (choice == 2)
-    {
-        parallelMergeSort(array, 0, n - 1);
-    }
-    else
-    {
-        cout << "Invalid choice. Exiting program." << endl;
-        return 0;
-    }
 
     cout << "Sorted Array: ";
     for (int i = 0; i < n; i++)
@@ -150,31 +114,3 @@ int main()
 
     return 0;
 }
-
-//
-
-// Test Case 1:
-// Input:
-// Enter the size of the array: 5
-// Enter 1 for Parallel Bubble Sort or 2 for Parallel Merge Sort: 1
-
-// Output:
-// Original Array: 68 67 69 73 29
-// Sorted Array: 29 67 68 69 73
-
-// Test Case 2:
-// Input:
-// Enter the size of the array: 10
-// Enter 1 for Parallel Bubble Sort or 2 for Parallel Merge Sort: 2
-
-// Output:
-// Original Array: 97 73 76 77 35 77 29 44 50 77
-// Sorted Array: 29 35 44 50 73 76 77 77 77 97
-
-// Test Case 3:
-// Input:
-// Enter the size of the array: 7
-// Enter 1 for Parallel Bubble Sort or 2 for Parallel Merge Sort: 3
-
-// Output:
-// Invalid choice. Exiting program.
